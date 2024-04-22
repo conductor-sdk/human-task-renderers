@@ -1,5 +1,5 @@
 {
-  "name": "human-task-material-renderers",
+  "name": "@orkes-io/human-task-material-renderers",
   "private": true,
   "version": "0.0.0",
   "type": "module",
