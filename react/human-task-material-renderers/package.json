@@ -15,9 +15,11 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@jsonforms/core": "^3.2.1",
+    "@jsonforms/material-renderers": "^3.2.1",
     "@jsonforms/react": "^3.2.1",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "@mui/x-date-pickers": "^7.2.0",
     "@storybook/addon-actions": "^8.0.9",
     "@storybook/addon-essentials": "^8.0.9",
     "@storybook/addon-links": "^8.0.9",
@@ -45,5 +47,6 @@
   },
   "volta": {
     "node": "20.12.2"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
