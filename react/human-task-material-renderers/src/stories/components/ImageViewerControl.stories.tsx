@@ -25,12 +25,36 @@ const renderers = [
 
 type Story = StoryObj<typeof ImageViewer>;
 
+const schema = {    
+    "properties": {
+      "productId": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "meters": {
+        "type": "string"
+      },
+      "startDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "endDate": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }}
+
 export const Control = (args: Story) => {
   console.debug("🚀 ~ Control ~ args:", args);
 
   return (
     <JsonForms
-      // schema={schema}
+      schema={schema}
       // uischema={{}}
       renderers={renderers}
       cells={materialCells}

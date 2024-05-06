@@ -1,7 +1,19 @@
 {
-  "name": "human-task-material-renderes",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@io-orkes/human-task-material-renderers",
+  "version": "0.0.1",
+  "private": false,
+  "license": "Apache-2.0",
+  "homepage": "https://orkes.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conductor-sdk/human-task-renderers.git"
+  },
+  "keywords": [
+    "conductor",
+    "workflow",
+    "orchestration",
+    "microservice"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -44,9 +56,5 @@
     "storybook": "^8.0.9",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  },
-  "volta": {
-    "node": "20.12.2"
-  },
-  "packageManager": "yarn@4.1.1"
+  }
 }
