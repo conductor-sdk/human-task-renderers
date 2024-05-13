@@ -20,6 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
+    "typeRoots": ["./dist/components/custom/index.d.ts", "node_modules/@types"],
     /* alias path */
     "baseUrl": "src",
     "paths": {

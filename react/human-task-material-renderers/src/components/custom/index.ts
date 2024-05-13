@@ -4,6 +4,7 @@ import ImageViewerControl from "./ImageViewerControl";
 import ImageViewerTester from "./ImageViewerTester";
 import VideoViewerControl from "./VideoView/VideoViewerControl";
 import VideoViewerTester from "./VideoView/VideoViewerTester";
+import { DescriptionText } from "./DescriptionText";
 
 export { DescriptionTextControl, ImageViewerControl, VideoViewerControl };
-export { DescriptionTextTester, ImageViewerTester, VideoViewerTester };
+export { DescriptionText, DescriptionTextTester, ImageViewerTester, VideoViewerTester };
