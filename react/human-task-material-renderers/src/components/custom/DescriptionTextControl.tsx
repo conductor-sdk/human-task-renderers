@@ -1,6 +1,6 @@
 import { ControlProps } from "@jsonforms/core";
 import { withJsonFormsControlProps } from "@jsonforms/react";
-import {DescriptionText, DescriptionTextProps } from "./DescriptionText";
+import { DescriptionText, DescriptionTextProps } from "./DescriptionText";
 import _omit from "lodash/omit";
 
 type DescriptionTextOptions = DescriptionTextProps & {
