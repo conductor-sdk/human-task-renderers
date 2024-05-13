@@ -28,7 +28,7 @@ export interface DescriptionTextProps {
   label?: string;
 }
 
-const DescriptionText: React.FC<DescriptionTextProps> = ({
+export const DescriptionText: React.FC<DescriptionTextProps> = ({
   id,
   value,
   align = "inherit",
@@ -54,4 +54,3 @@ const DescriptionText: React.FC<DescriptionTextProps> = ({
   );
 };
 
-export default DescriptionText;

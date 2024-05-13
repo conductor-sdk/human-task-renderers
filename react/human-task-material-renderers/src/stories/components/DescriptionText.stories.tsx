@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import DescriptionText, {
+import {
+  DescriptionText,
   DescriptionTextProps,
 } from "components/custom/DescriptionText";
 
