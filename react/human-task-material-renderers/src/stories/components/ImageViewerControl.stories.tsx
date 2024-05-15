@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 import { ControlProps } from "@jsonforms/core";
 import { JsonForms } from "@jsonforms/react";
 import {
@@ -6,70 +6,62 @@ import {
   materialRenderers,
 } from "@jsonforms/material-renderers";
 
-import ImageViewer from "components/custom/ImageViewerControl";
 import {
-  DescriptionTextControl,
-  DescriptionTextTester,
   ImageViewerControl,
   ImageViewerTester,
-  VideoViewerControl,
-  VideoViewerTester,
 } from "components/custom";
 
 const renderers = [
   ...materialRenderers,
-  { tester: DescriptionTextTester, renderer: DescriptionTextControl },
   { tester: ImageViewerTester, renderer: ImageViewerControl },
-  { tester: VideoViewerTester, renderer: VideoViewerControl },
 ];
 
-type Story = StoryObj<typeof ImageViewer>;
+const schema = {
+  properties: {
+    image: {
+      type: "string",
+      format: "uri",
+    },
+  },
+};
 
-const schema = {    
-    "properties": {
-      "productId": {
-        "type": "string"
+const uiSchema = {
+  type: "VerticalLayout",
+  elements: [
+    {
+      type: "Control",
+      scope: "#/properties/image",
+      label: "Image viewer",
+      options: {
+        readonly: true,
+        display: "image-viewer",        
       },
-      "name": {
-        "type": "string"
-      },
-      "description": {
-        "type": "string"
-      },
-      "meters": {
-        "type": "string"
-      },
-      "startDate": {
-        "type": "string",
-        "format": "date-time"
-      },
-      "endDate": {
-        "type": "string",
-        "format": "date-time"
-      }
-    }}
+    },
+  ],
+};
 
-export const Control = (args: Story) => {
-  console.debug("🚀 ~ Control ~ args:", args);
-
+export const Control = (args: ControlProps) => {
   return (
     <JsonForms
       schema={schema}
-      // uischema={{}}
+      uischema={uiSchema}
       renderers={renderers}
       cells={materialCells}
-      data={{}}
-      readonly={false}
-      // onChange={({ data }) => onChange(data)}
-      validationMode={"ValidateAndShow"}
+      data={args.data}
+      readonly={false}     
     />
   );
 };
 
 export default {
-  title: "JSON form control",
+  title: "JSON form ImageViewer control",
   component: Control,
   tags: ["autodocs"],
-  args: {},
+  args: {
+    data: {
+      image:
+        "https://e1.pxfuel.com/desktop-wallpaper/244/673/desktop-wallpaper-cute-siberian-husky-puppy-sitting-on-grass-puppies-baby-siberian-husky.jpg",
+    },
+  },
   argTypes: {},
 } as Meta<ControlProps>;
