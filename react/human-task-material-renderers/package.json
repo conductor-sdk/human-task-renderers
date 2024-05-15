@@ -1,6 +1,6 @@
 {
   "name": "@io-orkes/human-task-material-renderers-react",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha-4",
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://orkes.io",
@@ -71,7 +71,9 @@
     }
   },
   "files": [
-    "dist",
+    "dist/components",
+    "dist/index.umd.js",
+    "dist/index.es.js",
     "README.md"
   ],
   "publishConfig": {
