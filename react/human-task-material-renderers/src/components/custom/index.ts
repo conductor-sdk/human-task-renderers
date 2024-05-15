@@ -8,6 +8,8 @@ import BooleanTester from "./Boolean/BooleanTester";
 import BooleanControl from "./Boolean/BooleanControl";
 import MarkdownTextControl from "./MarkdownText/MarkdownTextControl";
 import MarkdownTextTester from "./MarkdownText/MarkdownTextTester";
+import FileUploadControl from "./FileUploadControl";
+import FileUploadTester from "./FileUploadTester";
 import { DescriptionText } from "./DescriptionText";
 
 export {
@@ -16,6 +18,7 @@ export {
   VideoViewerControl,
   BooleanControl,
   MarkdownTextControl,
+  FileUploadControl,
 };
 export {
   DescriptionText,
@@ -24,4 +27,5 @@ export {
   VideoViewerTester,
   BooleanTester,
   MarkdownTextTester,
+  FileUploadTester,
 };
