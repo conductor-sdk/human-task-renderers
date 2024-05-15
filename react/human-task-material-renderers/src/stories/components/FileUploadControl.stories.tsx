@@ -51,7 +51,7 @@ export const Control = (args: ControlProps) => {
 };
 
 export default {
-  title: "JSON form FileUpload control",
+  title: "File/File upload JSON form control",
   component: Control,
   tags: ["autodocs"],
   args: {},

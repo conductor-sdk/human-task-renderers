@@ -10,7 +10,6 @@ import MarkdownTextControl from "./MarkdownText/MarkdownTextControl";
 import MarkdownTextTester from "./MarkdownText/MarkdownTextTester";
 import FileUploadControl from "./FileUploadControl";
 import FileUploadTester from "./FileUploadTester";
-import { DescriptionText } from "./DescriptionText";
 
 export {
   DescriptionTextControl,
@@ -21,7 +20,6 @@ export {
   FileUploadControl,
 };
 export {
-  DescriptionText,
   DescriptionTextTester,
   ImageViewerTester,
   VideoViewerTester,

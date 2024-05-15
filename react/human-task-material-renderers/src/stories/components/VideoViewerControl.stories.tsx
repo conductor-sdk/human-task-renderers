@@ -51,7 +51,7 @@ export const Control = (args: ControlProps) => {
 };
 
 export default {
-  title: "JSON form VideoViewer control",
+  title: "VideoViewer JSON form control",
   component: Control,
   tags: ["autodocs"],
   args: {
