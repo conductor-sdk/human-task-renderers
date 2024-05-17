@@ -6,21 +6,18 @@ import {
   materialRenderers,
 } from "@jsonforms/material-renderers";
 
-import {
-  ImageViewerControl,
-  ImageViewerTester,
-} from "components/custom";
+import { FileUploadControl, FileUploadTester } from "components/custom";
 
 const renderers = [
   ...materialRenderers,
-  { tester: ImageViewerTester, renderer: ImageViewerControl },
+  { tester: FileUploadTester, renderer: FileUploadControl },
 ];
 
 const schema = {
   properties: {
-    image: {
+    file: {
       type: "string",
-      format: "uri",
+      format: "binary",
     },
   },
 };
@@ -30,11 +27,11 @@ const uiSchema = {
   elements: [
     {
       type: "Control",
-      scope: "#/properties/image",
-      label: "Image viewer",
+      scope: "#/properties/file",
+      label: "File upload",
       options: {
         readonly: true,
-        display: "image-viewer",        
+        display: "file-upload",
       },
     },
   ],
@@ -48,20 +45,15 @@ export const Control = (args: ControlProps) => {
       renderers={renderers}
       cells={materialCells}
       data={args.data}
-      readonly={false}     
+      readonly={false}
     />
   );
 };
 
 export default {
-  title: "ImageViewer JSON form control",
+  title: "File/File upload JSON form control",
   component: Control,
   tags: ["autodocs"],
-  args: {
-    data: {
-      image:
-        "https://e1.pxfuel.com/desktop-wallpaper/244/673/desktop-wallpaper-cute-siberian-husky-puppy-sitting-on-grass-puppies-baby-siberian-husky.jpg",
-    },
-  },
+  args: {},
   argTypes: {},
 } as Meta<ControlProps>;

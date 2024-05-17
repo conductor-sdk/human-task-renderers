@@ -7,20 +7,19 @@ import {
 } from "@jsonforms/material-renderers";
 
 import {
-  ImageViewerControl,
-  ImageViewerTester,
+  MarkdownTextControl,
+  MarkdownTextTester,
 } from "components/custom";
 
 const renderers = [
   ...materialRenderers,
-  { tester: ImageViewerTester, renderer: ImageViewerControl },
+  { tester: MarkdownTextTester, renderer: MarkdownTextControl },
 ];
 
 const schema = {
   properties: {
-    image: {
-      type: "string",
-      format: "uri",
+    markdown: {
+     type: "string"      
     },
   },
 };
@@ -30,11 +29,11 @@ const uiSchema = {
   elements: [
     {
       type: "Control",
-      scope: "#/properties/image",
-      label: "Image viewer",
+      scope: "#/properties/markdown",
+      label: "Markdown viewer",
       options: {
         readonly: true,
-        display: "image-viewer",        
+        display: "markdown-text",       
       },
     },
   ],
@@ -54,13 +53,24 @@ export const Control = (args: ControlProps) => {
 };
 
 export default {
-  title: "ImageViewer JSON form control",
+  title: "Markdown/Markdown text JSON form control",
   component: Control,
   tags: ["autodocs"],
   args: {
     data: {
-      image:
-        "https://e1.pxfuel.com/desktop-wallpaper/244/673/desktop-wallpaper-cute-siberian-husky-puppy-sitting-on-grass-puppies-baby-siberian-husky.jpg",
+      markdown: `### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*here be dragons*
+:::`,
     },
   },
   argTypes: {},

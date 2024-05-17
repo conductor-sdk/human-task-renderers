@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import FileUpload, { UploadButtonProps } from "components/custom/FileUpload";
 
 export default {
-  title: "File upload",
+  title: "File/File upload",
   component: FileUpload,
   tags: ["autodocs"],
   args: {},

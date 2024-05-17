@@ -6,19 +6,16 @@ import {
   materialRenderers,
 } from "@jsonforms/material-renderers";
 
-import {
-  ImageViewerControl,
-  ImageViewerTester,
-} from "components/custom";
+import { VideoViewerControl, VideoViewerTester } from "components/custom";
 
 const renderers = [
   ...materialRenderers,
-  { tester: ImageViewerTester, renderer: ImageViewerControl },
+  { tester: VideoViewerTester, renderer: VideoViewerControl },
 ];
 
 const schema = {
   properties: {
-    image: {
+    video: {
       type: "string",
       format: "uri",
     },
@@ -30,11 +27,11 @@ const uiSchema = {
   elements: [
     {
       type: "Control",
-      scope: "#/properties/image",
-      label: "Image viewer",
+      scope: "#/properties/video",
+      label: "Video viewer",
       options: {
         readonly: true,
-        display: "image-viewer",        
+        display: "video-viewer",
       },
     },
   ],
@@ -48,19 +45,19 @@ export const Control = (args: ControlProps) => {
       renderers={renderers}
       cells={materialCells}
       data={args.data}
-      readonly={false}     
+      readonly={false}
     />
   );
 };
 
 export default {
-  title: "ImageViewer JSON form control",
+  title: "VideoViewer JSON form control",
   component: Control,
   tags: ["autodocs"],
   args: {
     data: {
-      image:
-        "https://e1.pxfuel.com/desktop-wallpaper/244/673/desktop-wallpaper-cute-siberian-husky-puppy-sitting-on-grass-puppies-baby-siberian-husky.jpg",
+      video:
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     },
   },
   argTypes: {},
