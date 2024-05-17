@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 import path from "path";
 
@@ -13,7 +13,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/components/custom/index.ts"),
+      entry: path.resolve(__dirname, "src/components/index.ts"),
       name: "human-components",
       fileName: (format) => `index.${format}.js`,
     },
