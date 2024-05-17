@@ -7,20 +7,20 @@ import {
 } from "@jsonforms/material-renderers";
 
 import {
-  ImageViewerControl,
-  ImageViewerTester,
+  BooleanControl,
+  BooleanTester,
 } from "components/custom";
 
 const renderers = [
   ...materialRenderers,
-  { tester: ImageViewerTester, renderer: ImageViewerControl },
+  { tester: BooleanTester, renderer: BooleanControl },
 ];
 
 const schema = {
   properties: {
-    image: {
-      type: "string",
-      format: "uri",
+    bool: {
+      type: "boolean",
+      
     },
   },
 };
@@ -30,11 +30,10 @@ const uiSchema = {
   elements: [
     {
       type: "Control",
-      scope: "#/properties/image",
-      label: "Image viewer",
-      options: {
-        readonly: true,
-        display: "image-viewer",        
+      scope: "#/properties/bool",
+      label: "Checkbox",
+      options: {        
+        display: "boolean",        
       },
     },
   ],
@@ -54,13 +53,13 @@ export const Control = (args: ControlProps) => {
 };
 
 export default {
-  title: "ImageViewer JSON form control",
+  title: "Boolean JSON form control",
   component: Control,
   tags: ["autodocs"],
   args: {
     data: {
-      image:
-        "https://e1.pxfuel.com/desktop-wallpaper/244/673/desktop-wallpaper-cute-siberian-husky-puppy-sitting-on-grass-puppies-baby-siberian-husky.jpg",
+      bool:
+        true,
     },
   },
   argTypes: {},

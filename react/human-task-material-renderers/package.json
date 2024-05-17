@@ -1,6 +1,6 @@
 {
-  "name": "@io-orkes/human-task-material-renderers",
-  "version": "0.0.6",
+  "name": "@io-orkes/human-task-material-renderers-react",
+  "version": "0.0.1-alpha-4",
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://orkes.io",
@@ -26,11 +26,14 @@
   "dependencies": {
     "@io-orkes/conductor-javascript": "^2.1.0",
     "@jsonforms/material-renderers": "^3.2.1",
-    "@storybook/addon-actions": "^8.0.9",
-    "@storybook/addon-essentials": "^8.0.9",
-    "@storybook/addon-links": "^8.0.9",
-    "@storybook/preset-create-react-app": "^8.0.9",
-    "@storybook/react": "^8.0.9",
+    "@storybook/addon-actions": "^8.1.0",
+    "@storybook/addon-essentials": "^8.1.0",
+    "@storybook/addon-links": "^8.1.0",
+    "@storybook/preset-create-react-app": "^8.1.0",
+    "@storybook/react": "^8.1.0",
+    "react-markdown": "^9.0.1",
+    "react-player": "^2.16.0",
+    "rehype-highlight": "^7.0.0",
     "vite-plugin-dts": "^3.9.1"
   },
   "devDependencies": {
@@ -45,7 +48,7 @@
     "react-dom": "^18.2.0",
     "react-player": "^2.16.0",
     "@chromatic-com/storybook": "^1",
-    "@storybook/react-vite": "^8.0.9",
+    "@storybook/react-vite": "^8.1.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
@@ -55,7 +58,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "react-refresh": "^0.14.0",
-    "storybook": "^8.0.9",
+    "storybook": "^8.1.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   },
@@ -82,7 +85,9 @@
     }
   },
   "files": [
-    "dist",
+    "dist/components",
+    "dist/index.umd.js",
+    "dist/index.es.js",
     "README.md"
   ],
   "publishConfig": {
