@@ -1,6 +1,6 @@
 {
   "name": "@io-orkes/human-task-material-renderers-react",
-  "version": "0.0.1-alpha-4",
+  "version": "0.0.1-alpha-17",
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://orkes.io",
@@ -16,7 +16,6 @@
   ],
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -26,43 +25,39 @@
   "dependencies": {
     "react-markdown": "^9.0.1",
     "react-player": "^2.16.0",
-    "rehype-highlight": "^7.0.0",
-    "@jsonforms/material-renderers": "^3.2.1"
+    "rehype-highlight": "^7.0.0"
   },
   "devDependencies": {
-    "vite-plugin-dts": "^3.9.1",
     "@chromatic-com/storybook": "^1",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@jsonforms/core": "^3.1.0",
+    "@jsonforms/material-renderers": "^3.2.1",
     "@jsonforms/react": "^3.1.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.0",
     "@mui/x-date-pickers": "^6.0.0",
+    "@storybook/addon-actions": "^8.1.0",
+    "@storybook/addon-essentials": "^8.1.0",
+    "@storybook/addon-links": "^8.1.0",
+    "@storybook/preset-create-react-app": "^8.1.0",
+    "@storybook/react": "^8.1.0",
+    "@storybook/react-vite": "^8.1.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitejs/plugin-react": "^4.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-refresh": "^0.14.0",
-    "rollup-plugin-cleanup": "^3.2.1",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "rollup-plugin-visualizer": "^5.12.0",
     "storybook": "^8.1.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "@storybook/react-vite": "^8.1.0",
-    "@storybook/addon-actions": "^8.1.0",
-    "@storybook/addon-essentials": "^8.1.0",
-    "@storybook/addon-links": "^8.1.0",
-    "@storybook/preset-create-react-app": "^8.1.0",
-    "@storybook/react": "^8.1.0",
-    "@io-orkes/conductor-javascript": "^2.1.0"
+    "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
     "@emotion/react": "^11.4.1",
@@ -73,7 +68,7 @@
     "@mui/material": "^5.13.0",
     "@mui/x-date-pickers": "^6.0.0",
     "react": "^16.12.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^16.12.0 || ^17.0.0 || ^18.0.0"
   },
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -86,9 +81,7 @@
     }
   },
   "files": [
-    "dist/components",
-    "dist/index.umd.js",
-    "dist/index.es.js",
+    "dist",
     "README.md"
   ],
   "publishConfig": {

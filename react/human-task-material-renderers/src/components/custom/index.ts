@@ -1,6 +1,3 @@
-import { JsonFormsRendererRegistryEntry } from "@jsonforms/core";
-import { materialRenderers } from "@jsonforms/material-renderers";
-
 import DescriptionTextControl from "./DescriptionTextControl";
 import DescriptionTextTester from "./DescriptionTextTester";
 import ImageViewerControl from "./ImageViewerControl";
@@ -31,8 +28,7 @@ export {
   FileUploadTester,
 };
 
-export const humanTaskRenderers: JsonFormsRendererRegistryEntry[] = [
-  ...materialRenderers,
+export const humanTaskRenderers = [
   { tester: DescriptionTextTester, renderer: DescriptionTextControl },
   { tester: ImageViewerTester, renderer: ImageViewerControl },
   { tester: VideoViewerTester, renderer: VideoViewerControl },

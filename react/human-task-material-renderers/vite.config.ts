@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import path from "path";
 
@@ -15,10 +15,10 @@ export default defineConfig({
     },
   },
   build: {
+    minify: false,
     lib: {
       entry: path.resolve(__dirname, "src/components/index.ts"),
       name: "human-components",
-      formats: ["es"],
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
@@ -26,6 +26,12 @@ export default defineConfig({
         ...Object.keys(packageJson.devDependencies),
         ...Object.keys(packageJson.peerDependencies),
       ],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
     },
     //Generates sourcemaps for the built files,
     //aiding in debugging.

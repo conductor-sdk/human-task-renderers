@@ -4,6 +4,7 @@
 node_modules
 src
 tests
+
 # Ignore specific files
 .vite
 .vscode
