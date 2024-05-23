@@ -172,7 +172,7 @@ We welcome contributions to `@io-orkes/human-task-material-renderers-react`. If 
 
 ## License
 
-This library is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for more details.
+This library is licensed under the Apache-2.0 License. See the [LICENSE](https://github.com/conductor-sdk/human-task-renderers/blob/main/LICENSE) file for more details.
 
 ---
 
