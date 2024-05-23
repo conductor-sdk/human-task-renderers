@@ -11,6 +11,11 @@ import MarkdownTextTester from "./MarkdownText/MarkdownTextTester";
 import FileUploadControl from "./FileUploadControl";
 import FileUploadTester from "./FileUploadTester";
 
+import {
+  materialCells,
+  materialRenderers,
+} from "@jsonforms/material-renderers";
+
 export {
   DescriptionTextControl,
   ImageViewerControl,
@@ -28,7 +33,10 @@ export {
   FileUploadTester,
 };
 
+export const humanTaskCells = materialCells;
+
 export const humanTaskRenderers = [
+  ...materialRenderers,
   { tester: DescriptionTextTester, renderer: DescriptionTextControl },
   { tester: ImageViewerTester, renderer: ImageViewerControl },
   { tester: VideoViewerTester, renderer: VideoViewerControl },

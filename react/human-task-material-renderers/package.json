@@ -1,6 +1,6 @@
 {
   "name": "@io-orkes/human-task-material-renderers-react",
-  "version": "0.0.1-alpha-17",
+  "version": "0.0.1-alpha-18",
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://orkes.io",
@@ -25,14 +25,14 @@
   "dependencies": {
     "react-markdown": "^9.0.1",
     "react-player": "^2.16.0",
-    "rehype-highlight": "^7.0.0"
+    "rehype-highlight": "^7.0.0",
+    "@jsonforms/material-renderers": "^3.2.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@jsonforms/core": "^3.1.0",
-    "@jsonforms/material-renderers": "^3.2.1",
     "@jsonforms/react": "^3.1.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.0",
@@ -62,13 +62,12 @@
   "peerDependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@jsonforms/core": "^3.1.0",
-    "@jsonforms/react": "^3.1.0",
+    "@jsonforms/core": "3.2.1",
+    "@jsonforms/react": "3.2.1",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.0",
     "@mui/x-date-pickers": "^6.0.0",
-    "react": "^16.12.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.12.0 || ^17.0.0 || ^18.0.0"
+    "react": "^16.12.0 || ^17.0.0 || ^18.0.0"
   },
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
