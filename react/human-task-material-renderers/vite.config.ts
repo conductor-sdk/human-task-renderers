@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import path from "path";
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const packageJson = require("./package.json");
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,13 +15,17 @@ export default defineConfig({
     },
   },
   build: {
+    minify: false,
     lib: {
-      entry: path.resolve(__dirname, "src/components/custom/index.ts"),
+      entry: path.resolve(__dirname, "src/components/index.ts"),
       name: "human-components",
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: [
+        ...Object.keys(packageJson.devDependencies),
+        ...Object.keys(packageJson.peerDependencies),
+      ],
       output: {
         globals: {
           react: "React",
