@@ -53,4 +53,3 @@ export const DescriptionText: React.FC<DescriptionTextProps> = ({
     </FormControl>
   );
 };
-
