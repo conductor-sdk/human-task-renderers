@@ -6,10 +6,7 @@ import {
   materialRenderers,
 } from "@jsonforms/material-renderers";
 
-import {
-  BooleanControl,
-  BooleanTester,
-} from "components/custom";
+import { BooleanControl, BooleanTester } from "components/custom";
 
 const renderers = [
   ...materialRenderers,
@@ -20,7 +17,6 @@ const schema = {
   properties: {
     bool: {
       type: "boolean",
-      
     },
   },
 };
@@ -32,8 +28,8 @@ const uiSchema = {
       type: "Control",
       scope: "#/properties/bool",
       label: "Checkbox",
-      options: {        
-        display: "boolean",        
+      options: {
+        display: "boolean",
       },
     },
   ],
@@ -47,7 +43,7 @@ export const Control = (args: ControlProps) => {
       renderers={renderers}
       cells={materialCells}
       data={args.data}
-      readonly={false}     
+      readonly={false}
     />
   );
 };
@@ -58,8 +54,7 @@ export default {
   tags: ["autodocs"],
   args: {
     data: {
-      bool:
-        true,
+      bool: true,
     },
   },
   argTypes: {},

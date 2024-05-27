@@ -8,7 +8,12 @@ const packageJson = require("./package.json");
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [
+    react(),
+    dts({
+      exclude: ["**/*.stories.tsx"],
+    }),
+  ],
   resolve: {
     alias: {
       components: `${path.resolve(__dirname, "./src/components/")}`,
