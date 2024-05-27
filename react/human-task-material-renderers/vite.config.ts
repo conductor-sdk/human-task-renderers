@@ -30,6 +30,7 @@ export default defineConfig({
       external: [
         ...Object.keys(packageJson.devDependencies),
         ...Object.keys(packageJson.peerDependencies),
+        "**/*.stories.tsx",
       ],
       output: {
         globals: {
