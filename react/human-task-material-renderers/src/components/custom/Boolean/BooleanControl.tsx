@@ -12,6 +12,7 @@ const BooleanControl = ({
   id,
   label,
   handleChange,
+  enabled,
   path,
   uischema,
 }: ControlProps) => {
@@ -26,6 +27,7 @@ const BooleanControl = ({
       label={label}
       path={path}
       handleChange={handleChange}
+      readonly={!enabled}
       {...restProps}
     />
   );
