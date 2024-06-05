@@ -2,6 +2,10 @@
 
 `@io-orkes/human-task-material-renderers-react` is a custom library that extends the `@jsonforms/material-renderers` to provide custom renderers for human task forms. This library leverages Material UI components to deliver a seamless and responsive user interface for human task management within your applications.
 
+Show support for the human task material renderer. Please help spread the awareness by starring our repo.
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/conductor-sdk/human-task-renderers?style=social&label=Star&maxAge=)](https://github.com/conductor-sdk/human-task-renderers)
+
 ## Features
 
 - Custom renderers for JSON Forms using Material UI.

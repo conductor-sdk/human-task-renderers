@@ -23,10 +23,10 @@
     "build:storybook": "storybook build"
   },
   "dependencies": {
+    "@jsonforms/material-renderers": "^3.2.1",
     "react-markdown": "^9.0.1",
     "react-player": "^2.16.0",
-    "rehype-highlight": "^7.0.0",
-    "@jsonforms/material-renderers": "^3.2.1"
+    "rehype-highlight": "^7.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1",
