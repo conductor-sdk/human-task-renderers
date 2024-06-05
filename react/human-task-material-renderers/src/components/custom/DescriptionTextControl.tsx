@@ -20,7 +20,7 @@ const DescriptionTextControl = ({
   );
   return (
     <DescriptionText
-      value={_isString(data) ? data : ""}
+      value={_isString(data) ? data : label}
       id={id}
       label={label}
       {...restProps}
