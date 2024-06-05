@@ -1,8 +1,4 @@
-import { readFileSync, writeFileSync, readdirSync, lstatSync } from "fs";
-import { join } from "path";
-
-// Define the license header
-const licenseHeader = `/*
+/*
 * Copyright 2024 Conductor Authors.
 * <p>
 * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
@@ -14,10 +10,18 @@ const licenseHeader = `/*
 * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
 * specific language governing permissions and limitations under the License.
 */
-`;
 
-const licenseHeaderPattern =
-  /\/\*[\s\S]*?Licensed under the Apache License[\s\S]*?\*\/\s*/;
+
+import { readFileSync, writeFileSync, readdirSync, lstatSync } from "fs";
+import { join } from "path";
+
+// Define the license header
+const licenseHeader = ``;
+
+const licenseHeaderPattern = /\/\*[\s\S]*?Conductor Authors[\s\S]*?\*\/\s*/;
+
+// List of directories to ignore
+const ignoreDirectories = ["node_modules", "dist"];
 
 const addLicenseHeaderToFile = (filePath) => {
   let fileContent = readFileSync(filePath, "utf8");
@@ -37,6 +41,10 @@ const addLicenseHeaderToFile = (filePath) => {
 const processDirectory = (directory) => {
   readdirSync(directory).forEach((file) => {
     const fullPath = join(directory, file);
+    if (ignoreDirectories.some((ignoreDir) => fullPath.includes(ignoreDir))) {
+      return;
+    }
+
     if (lstatSync(fullPath).isDirectory()) {
       processDirectory(fullPath);
     } else if (fullPath.match(/\.(js|ts|jsx|tsx|py|java|cpp|h)$/)) {
@@ -47,4 +55,4 @@ const processDirectory = (directory) => {
 };
 
 // Specify the root directory of your project
-processDirectory("./src");
+processDirectory("./");
