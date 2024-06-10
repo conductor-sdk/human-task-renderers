@@ -16,14 +16,18 @@ jobs:
           node-version: "18"
           registry-url: "https://registry.npmjs.org"
       - name: Bump version to release
-        run: sed -i "s/v0.0.0/$RELEASE_VERSION/" ./react/human-task-material-renderers/package.json
+        run: sed -i "s/v0.0.0/$RELEASE_VERSION/" ./package.json
         env:
           RELEASE_VERSION: ${{ github.ref_name }}
+        working-directory: ./react/human-task-material-renderers
       - name: Install dependencies required to build package
         run: yarn install
+        working-directory: ./react/human-task-material-renderers
       - name: Build package
         run: yarn build
+        working-directory: ./react/human-task-material-renderers
       - name: Publish package
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: ./react/human-task-material-renderers
