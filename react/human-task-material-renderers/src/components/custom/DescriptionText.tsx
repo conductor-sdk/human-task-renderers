@@ -61,6 +61,7 @@ export const DescriptionText: React.FC<DescriptionTextProps> = ({
         noWrap={noWrap}
         paragraph={paragraph}
         whiteSpace={preWrap ? "pre-wrap" : "normal"}
+        sx={{ marginBottom: "4px" }}
       >
         {_isUndefined(value) ? label : value}
       </Typography>

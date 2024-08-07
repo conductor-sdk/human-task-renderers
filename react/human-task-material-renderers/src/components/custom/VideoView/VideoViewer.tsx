@@ -48,6 +48,7 @@ const VideoViewer: React.FC<VideoViewerProps> = ({
             justifyContent: "center",
             width: "100%",
             maxWidth: "100%",
+            marginBottom: '4px',
             ">div": {
               maxWidth: "600px ",
               maxHeight: "500px",

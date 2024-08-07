@@ -45,6 +45,7 @@ const Boolean: React.FC<BooleanProps> = ({
       checked={!_isUndefined(value) ? value : defaultValue}
       disabled={readonly}
       required={required}
+      sx={{ marginBottom: "4px" }}
     />
   );
 };

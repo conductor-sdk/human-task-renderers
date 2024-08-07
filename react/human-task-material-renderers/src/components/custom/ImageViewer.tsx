@@ -45,7 +45,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
             height={height}
             width={width}
             alt=""
-            style={{ maxWidth: "100%" }}
+            style={{ maxWidth: "100%", marginBottom: "4px" }}
           />
         ) : (
           " No Image to preview"
