@@ -15,7 +15,7 @@
 import { Box, Stack, FormControl } from "@mui/material";
 import React from "react";
 import ReactPlayer from "react-player";
-import _isUndefined from "lodash/isUndefined";
+import _isEmpty from "lodash/isEmpty";
 
 export interface VideoViewerProps {
   id?: string;
@@ -32,7 +32,7 @@ const VideoViewer: React.FC<VideoViewerProps> = ({
   width,
   defaultUrl,
 }) => {
-  const url = _isUndefined(value) ? defaultUrl : value;
+  const url = _isEmpty(value) ? defaultUrl : value;
   return (
     <FormControl fullWidth>
       <Stack
@@ -48,6 +48,7 @@ const VideoViewer: React.FC<VideoViewerProps> = ({
             justifyContent: "center",
             width: "100%",
             maxWidth: "100%",
+            marginBottom: '4px',
             ">div": {
               maxWidth: "600px ",
               maxHeight: "500px",
