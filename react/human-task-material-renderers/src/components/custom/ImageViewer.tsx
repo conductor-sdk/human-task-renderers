@@ -13,7 +13,7 @@
 
 
 import { Box, FormControl } from "@mui/material";
-import _isUndefined from "lodash/isUndefined";
+import _isEmpty from "lodash/isEmpty";
 export interface ImageViewerProps {
   id?: string;
   value?: string;
@@ -30,7 +30,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   width,
   defaultUrl,
 }) => {
-  const url = _isUndefined(value) ? defaultUrl : value;
+  const url = _isEmpty(value) ? defaultUrl : value;
   return (
     <FormControl fullWidth>
       <Box
