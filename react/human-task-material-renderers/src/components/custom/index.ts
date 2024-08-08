@@ -49,7 +49,7 @@ export {
 
 export const humanTaskCells = materialCells;
 
-export const humanTaskUnwrapped = {
+export const HumanTaskUnwrapped = {
   ...Unwrapped,
   DescriptionTextControl,
   ImageViewerControl,
