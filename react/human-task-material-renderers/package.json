@@ -1,6 +1,6 @@
 {
   "name": "@io-orkes/human-task-material-renderers-react",
-  "version": "v0.0.0",
+  "version": "0.0.0",
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://orkes.io",
@@ -24,7 +24,7 @@
     "set:license:header": "node addLicenseHeader.js"
   },
   "dependencies": {
-    "@jsonforms/material-renderers": "^3.2.1",
+    "@jsonforms/material-renderers": "^3.6.0",
     "react-markdown": "^9.0.1",
     "react-player": "^2.16.0",
     "rehype-highlight": "^7.0.0",
