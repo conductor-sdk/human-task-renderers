@@ -24,7 +24,7 @@
     "set:license:header": "node addLicenseHeader.js"
   },
   "dependencies": {
-    "@jsonforms/material-renderers": "^3.6.0",
+    "@jsonforms/material-renderers": "^3.7.0-alpha.1",
     "react-markdown": "^9.0.1",
     "react-player": "^2.16.0",
     "rehype-highlight": "^7.0.0",
@@ -32,12 +32,12 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1",
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "@jsonforms/core": "^3.1.0",
-    "@jsonforms/react": "^3.1.0",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.10.8",
+    "@jsonforms/core": "^3.7.0-alpha.1",
+    "@jsonforms/react": "^3.7.0-alpha.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
     "@mui/x-date-pickers": "^6.0.0",
     "@storybook/addon-actions": "^8.1.0",
     "@storybook/addon-essentials": "^8.1.0",
@@ -62,12 +62,12 @@
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "@jsonforms/core": "3.2.1",
-    "@jsonforms/react": "3.2.1",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.10.8",
+    "@jsonforms/core": "^3.7.0-alpha.1",
+    "@jsonforms/react": "^3.7.0-alpha.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
     "@mui/x-date-pickers": "^6.0.0",
     "react": "^16.12.0 || ^17.0.0 || ^18.0.0"
   },
@@ -87,5 +87,8 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=20.19.0"
   }
 }

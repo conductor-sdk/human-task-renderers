@@ -13,6 +13,10 @@ Show support for the human task material renderer. Please help spread the awaren
 - Provides a set of predefined renderers for common form elements.
 - Fully customizable and easy to integrate with existing applications.
 
+## Requirements
+
+- Node.js version >=20.19.0
+
 ## Installation
 
 To install the library, use npm or yarn:
